@@ -1,38 +1,35 @@
-# Cars Dealership - Full Stack Capstone Project
+# fullstack_developer_capstone
 
-## Project Name
-
-Cars Dealership - National Car Retailer Web Application
-
-## Description
-
-A responsive full-stack web application that displays U.S. dealership branches, allows users to view dealers, filter by state, and submit reviews with IBM Watson sentiment analysis.
-Built with React, Django, Node.js microservices, MongoDB, and SQLite. Deployed using Docker, Kubernetes, and IBM Cloud Code Engine.
-
-## Technologies
-
-- **Frontend**: React, HTML5, CSS3, Bootstrap
-- **Backend**: Django, Django REST Framework, Node.js, Express
-- **Databases**: SQLite, MongoDB
-- **Cloud**: IBM Cloud Code Engine, IBM Watson NLU
-- **DevOps**: Docker, Kubernetes, GitHub Actions
+Full‑stack web application for a national car retailer.  
+Built with Django (backend API + static pages) and React (frontend SPA).  
+Deployed using Docker, Kubernetes and IBM Cloud Code Engine.
 
 ## Features
+- User registration, login, logout
+- View all dealerships, filter by state
+- View dealer details and customer reviews
+- Submit a review for a dealer
+- Sentiment analysis of reviews (mock IBM Watson NLU)
+- Admin panel for managing car makes/models and dealership data
 
-- User authentication (register, login, logout)
-- Browse all dealerships
-- Filter dealerships by state
-- View dealer details & reviews
-- Submit reviews with automatic sentiment analysis
-- Admin panel for managing data
-- Fully responsive design
+## Technologies
+- Backend: Django, Django REST Framework
+- Frontend: React, Bootstrap
+- Database: SQLite (development)
+- Deployment: Docker, Kubernetes, IBM Cloud Code Engine
+- CI/CD: GitHub Actions
 
-## Installation & Local Run
+## Getting Started
 
+### Prerequisites
+- Python 3.10+
+- Node.js 16+
+- Docker (optional)
+
+### Backend Setup
 ```bash
-git clone https://github.com/your-github-username/cars-dealership.git
-cd cars-dealership/server
+cd server
 pip install -r requirements.txt
 python manage.py migrate
+python manage.py seed_data
 python manage.py runserver
-```
