@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cars-dealership
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cars-dealership
+  template:
+    metadata:
+      labels:
+        app: cars-dealership
+    spec:
+      containers:
+        - name: app
+          image: <your-docker-image>
+          ports:
+            - containerPort: 8000
+          env:
+            - name: SECRET_KEY
+              value: "django-insecure-..."
